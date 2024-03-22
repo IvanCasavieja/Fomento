@@ -57,6 +57,8 @@ main {
     align-items: center;
     justify-content: start;
     padding: 0px 20px;
+    max-width: 1600px;
+    overflow: hidden;
 }
 
 .contenedorTituloLavanderia {
@@ -70,6 +72,10 @@ main {
     font-size: 5rem;
     font-weight: 550;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.burbujas {
+    overflow: hidden;
 }
 
 .burbujas div {
@@ -141,7 +147,6 @@ main {
     }
 
     50% {
-        margin-left: 20px;
         opacity: 0.5;
     }
 
@@ -517,6 +522,7 @@ footer .contenedorIframe iframe {
     #inicio .contenedorTotalInicio img#imagenTitulo {
         min-width: 70%;
     }
+
     footer {
         flex-direction: column;
         align-items: center;
@@ -549,7 +555,7 @@ footer .contenedorIframe iframe {
 
 @media (max-width:575px) {
     .contenedorTituloLavanderia span {
-        font-size:4rem;
+        font-size: 4rem;
     }
 
     .contenedorInfoFooter {
