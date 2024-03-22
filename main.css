@@ -1,0 +1,638 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1rem;
+
+}
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    z-index: 1111;
+    font-size: 18px;
+}
+
+.icon {
+    width: 35px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 100%;
+}
+
+#inicio {
+    width: 100%;
+    min-height: 100vh;
+    background: url(img/ropa.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicio .contenedorTotalInicio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0px 20px;
+}
+
+.contenedorTituloLavanderia {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorTituloLavanderia span {
+    color: black;
+    font-size: 5rem;
+    font-weight: 550;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.burbujas div {
+    background: rgba(251, 251, 252, 0.815);
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    animation: animarburbujas 4s linear infinite;
+}
+
+.burbujas div:nth-child(1) {
+    width: 50px;
+    height: 45px;
+    left: 40px;
+    animation-duration: 4s;
+}
+
+.burbujas div:nth-child(2) {
+    width: 60px;
+    height: 55px;
+    left: 25%;
+    animation-duration: 8s;
+}
+
+.burbujas div:nth-child(3) {
+    width: 30px;
+    height: 27px;
+    left: 40%;
+    animation-duration: 5s;
+}
+
+.burbujas div:nth-child(4) {
+    width: 65px;
+    height: 60px;
+    left: 50%;
+    animation-duration: 10s;
+}
+
+.burbujas div:nth-child(5) {
+    width: 55px;
+    height: 50px;
+    left: 65%;
+    animation-duration: 6.5s;
+}
+
+.burbujas div:nth-child(6) {
+    width: 50px;
+    height: 48px;
+    left: 85%;
+    animation-duration: 9s;
+}
+
+.burbujas div:nth-child(7) {
+    width: 35px;
+    height: 32px;
+    left: 90%;
+    animation-duration: 6s;
+}
+
+@keyframes animarburbujas {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    3% {
+        width: 30px;
+        height: 27px;
+    }
+
+    50% {
+        margin-left: 20px;
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotate(90deg);
+        bottom: 100vh;
+        background: rgba(255, 255, 255, 0.671);
+    }
+}
+
+.contenedorServicios {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.contenedorDescripcionLavadero {
+    width: 100%;
+}
+
+.contenedorServicios .contenedorTitulo {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.contenedorTargetas {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 0 0 0;
+}
+
+.contenedorTargetas .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 18rem;
+    width: 15rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.contenedorTargetas .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 50px rgb(163, 191, 255);
+}
+
+.contenedorTargetas .card .contenedorImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65%;
+    width: 100%;
+}
+
+.contenedorTargetas .card .contenedorImg img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.contenedorTituloCard {
+    transition: .5s;
+}
+
+.contenedorDescripcionCard {
+    transition: .5s;
+    height: 80px;
+    background-color: rgb(98, 156, 207);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -100px;
+}
+
+.contenedorTargetas .card:hover>.contenedorTituloCard {
+    opacity: 0;
+}
+
+.contenedorTargetas .card:hover>.contenedorDescripcionCard {
+    bottom: 0;
+}
+
+.contacto {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    padding-top: 100px;
+}
+
+.contacto form {
+    height: 480px;
+    width: 600px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background: rgb(126, 189, 244);
+}
+
+.contenedorTituloContacto h1 {
+    color: white;
+}
+
+.inputsContacto {
+    display: flex;
+    width: 100%;
+    padding: 0px 30px;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.inputsContacto .inputContactoBtn {
+    border: none;
+    outline: none;
+    padding: 20px 10px 0px;
+    background: transparent;
+    color: white;
+    transition: .5px;
+    border: none;
+    border-bottom: 1px solid rgb(66, 162, 246);
+}
+
+.inputsContacto .inputContactoBtn:focus {
+    border-bottom: 1px solid white;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+.inputsContacto input::placeholder {
+    color: white;
+}
+
+form .inputsContacto #textoContacto {
+    height: 100px !important;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    height: 150px;
+    border: none;
+}
+
+#textoContacto:focus {
+    outline: dodgerblue;
+    box-shadow: 0 0 19px rgb(187, 217, 247);
+}
+
+.contenedorSubmitContacto {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorSubmitContacto input {
+    padding: 3px 20px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: white;
+    transition: .5s;
+}
+
+.contenedorSubmitContacto input:hover {
+    background-color: aliceblue;
+}
+
+.contenedorVectorLavarropas {
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+}
+
+.contenedorVectorLavarropas img {
+    min-width: 250px;
+    width: 50%;
+
+}
+
+.contenedorBubble {
+    position: absolute;
+    left: 37%;
+    top: 30%;
+    display: flex;
+}
+
+.speech-bubble {
+    position: relative;
+    width: 200px;
+    min-height: 50px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+
+.speech-bubble .speech-text {
+    position: relative;
+}
+
+.speech-bubble .speech-text:before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    /* Adjust this value to control the "tail" position */
+    left: 0px;
+    transform: rotate(10deg);
+    border-width: 30px 10px 0;
+    border-style: solid;
+    border-color: #000000 transparent;
+    z-index: -1;
+}
+
+.speech-bubble p {
+    margin: 0;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    background-color: rgb(53, 53, 53);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+footer .contenedorInfoFooter {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .contenedorRedes {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+
+h3 {
+    color: white;
+}
+
+.contenedorParrafoRedes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contenedorParrafoRedes .contenedorContactoConLogo {
+    gap: 10px;
+    display: flex;
+}
+
+footer .contenedorRedes .contenedorParrafoRedes .contenedorContactoConLogo a,
+i {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+footer .contenedorDireccion {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-bottom: 40px;
+    border-left: 1px solid rgb(175, 175, 175);
+}
+
+footer .contenedorDireccion .contenedorTituloDireccion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorDireccionConLogo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contenedorDireccionConLogo p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0;
+    font-size: 18px;
+}
+
+footer .contenedorIframe {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 40px;
+}
+
+footer .contenedorIframe iframe {
+    height: 230px;
+    width: 550px;
+    border-radius: 8px;
+}
+
+/* media querys */
+
+@media (max-width:1200px) {
+    .contenedorDescripcionLavadero {
+        padding-top: 40px;
+    }
+
+    footer .contenedorIframe iframe {
+        width: 400px;
+    }
+}
+
+@media (max-width:995px) {
+
+    .contenedorTituloLavanderia span{
+        font-size: 4rem;
+    }
+
+    .contenedorVectorLavarropas {
+        display: none;
+    }
+
+    footer .contenedorIframe iframe {
+        width: 300px;
+    }
+}
+
+@media (max-width:900px) {
+
+    #inicio .contenedorTotalInicio img#imagenTitulo {
+        min-width: 70%;
+    }
+
+/*     .burbujas {
+        display: none;
+    } */
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    footer .contenedorInfoFooter {
+        width: 100%;
+    }
+
+    footer .contenedorDireccion {
+        border-left: none;
+    }
+
+    footer .contenedorIframe {
+        padding: 0;
+    }
+
+    footer .contenedorIframe iframe {
+        width: 600px;
+    }
+}
+
+@media (max-width:620px) {
+
+    footer .contenedorIframe iframe {
+        width: 500px;
+    }
+}
+
+@media (max-width:575px) {
+    .contenedorTituloLavanderia span{
+        font-size: 3rem;
+    }
+
+    .contenedorInfoFooter {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contenedorInfoFooter .contenedorRedes,
+    .contenedorInfoFooter .contenedorDireccion {
+        width: 100%;
+    }
+
+    footer .contenedorIframe iframe {
+        width: 300px;
+    }
+
+}
+
+@media (max-width:450px) {
+    .contenedorTituloLavanderia span{
+        font-size: 2.5rem;
+    }
+
+    #inicio .contenedorTotalInicio img#imagenTitulo {
+        min-width: 100%;
+        margin-left: 10px;
+    }
+
+    .contenedorParrafoRedes {
+        flex-direction: column;
+    }
+
+    .contenedorDireccionConLogo p {
+        text-align: center;
+    }
+
+    footer .contenedorIframe iframe {
+        width: 270px;
+    }
+}
+
+@media (max-width:380px) {
+    #formulario {
+        width: 260px;
+    }
+}
+
+@media (max-height: 845px) {
+    .contenedorBubble {
+        top: 20%;
+    }
+}
+
+@media (max-height: 700px) {
+    .contenedorBubble {
+        top: 10%;
+    }
+
+    .contacto {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-height: 600px) {
+
+    .contenedorServicios {
+        padding-top: 40px;
+    }
+
+    .contacto {
+        margin-top: 100px;
+    }
+
+    .contenedorBubble {
+        top: 0%;
+    }
+
+    #formulario {
+        height: 400px;
+    }
+}
