@@ -577,6 +577,7 @@ footer .contenedorIframe iframe {
 @media (max-width:450px) {
     .contenedorTituloLavanderia span {
         font-size: 3rem;
+        font-weight: 700;
     }
 
     #inicio .contenedorTotalInicio img#imagenTitulo {
